@@ -1,6 +1,6 @@
 .container {
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 13%;
     display: flex;
     flex-wrap: wrap;
@@ -10,11 +10,11 @@
     font-size: 20px;
     margin: 20px;
     padding: 60px;
-    width: 200px;
-    height:200px;
+    width: 150px;
+    height:150px;
 }
 
 img{
-    width: 200px;
-    height:200px;
+    width: 150px;
+    height:150px;
 }

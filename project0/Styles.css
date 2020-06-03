@@ -17,13 +17,14 @@
 
 ul {
 position: absolute;
-top: 85%;
-left: 12%;
+top: 93%;
+left: 5%;
+right:5%;
 list-style-type: none;
 margin: 0;
 padding: 0;
 overflow: hidden;
-background-color: #831818;
+background-color: #1b0505;
 font-family:fantasy;
 font-size: 28px;
 font-style: italic;
@@ -38,8 +39,8 @@ li a {
 display: block;
 color: white;
 text-align: center;
-padding-top: 20px;
-padding-bottom: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
 padding-right: 100px;
 padding-left: 100px;
 text-decoration: none;
