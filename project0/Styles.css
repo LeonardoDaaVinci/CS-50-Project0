@@ -1,0 +1,47 @@
+
+.banner {
+    width: 1366px;
+    height: 650px;
+}
+
+.homeButton{
+    position: absolute;
+    top: 33%;
+    left: 47.5%;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-style: italic;
+    color: white;
+}
+
+
+ul {
+position: absolute;
+top: 85%;
+left: 12%;
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #831818;
+font-family:fantasy;
+font-size: 28px;
+font-style: italic;
+color: white;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 100px;
+padding-left: 100px;
+text-decoration: none;
+}
+</style>
