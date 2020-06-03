@@ -1,8 +1,9 @@
 
-.banner {
+#banner {
     width: 1366px;
     height: 650px;
 }
+
 
 .homeButton{
     position: absolute;
@@ -14,6 +15,29 @@
     color: white;
 }
 
+@media (min-width: 500px) {
+    .homeButton {
+        position: absolute;
+        top: 33%;
+        left: 47.5%;
+        font-family: Arial, sans-serif;
+        font-size: 28px;
+        font-style: italic;
+        color: white;
+    }
+}
+
+@media (max-width: 499px) {
+    .homeButton {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        font-family: Arial, sans-serif;
+        font-size: 40px;
+        font-style: italic;
+        color: white;
+    }
+}
 
 ul {
 position: absolute;
@@ -45,4 +69,27 @@ padding-right: 100px;
 padding-left: 100px;
 text-decoration: none;
 }
-</style>
+
+
+table {
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    font-family:fantasy;
+    font-size: 15x;
+    font-style: italic;
+    color: white;
+    border: 2px solid rgb(88, 78, 78);
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    background-color: lightgray;
+}
