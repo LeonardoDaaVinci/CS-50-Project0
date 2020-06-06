@@ -1,0 +1,25 @@
+
+%flexSettings {
+    position: absolute;
+    top: 50%;
+    left: 13%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    @extend %flexSettings;
+
+    div {
+            font-size: 20px;
+            margin: 20px;
+            padding: 60px;
+            width: 150px;
+            height:150px;
+    }
+}
+
+img{
+    width: 150px;
+    height:150px;
+}
