@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <title>Search Books</title>
+    <style>
+        .form-control-borderless {
+            border: none;
+        }
+
+        .form-control-borderless:hover,
+        .form-control-borderless:active,
+        .form-control-borderless:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+
+
+        @font-face {
+            font-family: testfont;
+            src: url("/ParkLaneNF.otf") format("opentype");
+        }
+
+        .LogoFont {
+            /* font-family: Snell Roundhand, cursive; */
+            position: absolute;
+            left : 5px;
+            top : 5px;
+            height: 50px;
+            width: 50px;
+        }
+
+        .SearchBarPosition {
+            position: absolute;
+            margin-left: 580px;
+            margin-top: 300px;
+        }
+
+        .btn-warning {
+            background-color: #fbeec1;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- <img class="banner" src="{{ url_for('static', filename='BookSearch.jpg') }}"> -->
+
+        <!-- <div class="wrap"> -->
+        <!-- <div class="search"> -->
+        <!-- <input type="text" class="searchTerm" placeholder="What are you looking for?">
+               <button type="submit" class="searchButton">
+              </button> -->
+        <!-- </div> -->
+        <!-- ff
+         </div> -->
+
+        <!-- <div class="topnav" ,>
+            <a  href="{{ url_for('bookPage')}}"><img class="LogoFont" src="{{ url_for('static', filename='Logo.png') }}"> </a>
+            <a href="#news"></a>
+            <a href="#news">Bookish Fella</a>
+            <a href="#contact">Home</a>
+            <div class="topnav-right">
+                <a href="#Logged in as Krishna">Hi {{usrName}}</a>
+            </div>
+        </div> -->
+        <div class="topnav" ,>
+            <a  href="{{ url_for('bookPage')}}"><img class="LogoFont" src="{{ url_for('static', filename='Logo.png') }}"> </a>
+            <a href="#news"></a>
+            <a href="#news">Bookish Fella</a>
+            <a href="#contact">Home</a>
+            <div class="topnav-right">
+                <a href="#Logged in as Krishna">Hi {{usrName}}</a>
+                <a href="{{ url_for('index')}}">Logout</a>
+            </div>
+        </div>
+
+        <div>
+            <img class="banner" src="{{ url_for('static', filename='BookSearch.jpg') }}">
+        </div>
+
+    <div class="SearchBarPosition">
+        <form action="" method="post" role="form">
+            {{ form.csrf_token }}
+            
+                <div class="container">
+                    <br />
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-12 col-lg-16">
+                            <form class="card card-sm">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fas fa-search h4 text-body"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input class="form-control form-control-lg form-control-borderless"
+                                            type="search" name="searchFor" placeholder="Search Books Here">
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-warning" type="submit">Search</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+                        </div>
+                        <!--end of col-->
+                    </div>
+                </div>
+        </form>
+    </div>
+    </div>
+</body>
+
+</html>

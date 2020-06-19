@@ -1,0 +1,76 @@
+set FLASK_APP=application.py
+set FLASK_DEBUG=1
+set DATABASE_URL=postgres://lcvziwdbvzciha:962e0bfae4dbf6da083ab9d9f7db7580503941c1c1cc5c1cf415278e66f4aa74@ec2-54-86-170-8.compute-1.amazonaws.com:5432/davb4vnq443ols
+
+psql postgres://lcvziwdbvzciha:962e0bfae4dbf6da083ab9d9f7db7580503941c1c1cc5c1cf415278e66f4aa74@ec2-54-86-170-8.compute-1.amazonaws.com:5432/davb4vnq443ols
+
+
+E:\WebDevelopmentEdx\SourceCodes\PrettyPrinted\Forms\youtube_video_code\2017\01\17\Using Flask-WTForms With Flask-Bootstrap\flask_bootstrap\templates
+
+  CREATE TABLE bookInfo (
+      id SERIAL PRIMARY KEY,
+	  isbn VARCHAR NOT NULL,
+      title VARCHAR NOT NULL,
+      author VARCHAR NOT NULL,
+      year VARCHAR NOT NULL
+  );
+  
+  CREATE TABLE userInfo(
+		userId SERIAL PRIMARY KEY,
+		userName VARCHAR NOT NULL,
+		password VARCHAR NOT NULL,
+		emailId VARCHAR NOT NULL
+  );
+  
+  CREATE TABLE  reviews(
+		reviewId SERIAL PRIMARY KEY,
+		textReview VARCHAR NOT NULL,
+		bookId INTEGER REFERENCES bookInfo,
+		reviewerId INTEGER REFERENCES userInfo
+  );
+  
+
+  
+  
+  FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+  
+  
+  COPY bookishFellow FROM 'E:\CS-50\project1\books.csv' DELIMITER ',' CSV HEADER
+  
+  
+  
+  USER - SIGNUP :
+	  INSERT INTO userInfo
+      (userName, password)
+      VALUES ('Krishna', 'pwd1');
+	  
+	  INSERT INTO userInfo
+      (userName, password)
+      VALUES ('Alok', 'pwd2');
+	  
+	  book = db.execute("SELECT * FROM bookInfo WHERE title ='The Dark Is Rising' ");
+	  reviewer = SELECT userId FROM userInfo WHERE userName='Krishna';
+	  
+	  INSERT INTO reviews
+      (textReview, bookId, reviewerId)
+      VALUES ('WonderFull Book', 2, 2);
+	  
+	  
+	    (SELECT * FROM bookInfo WHERE title ='The Dark Is Rising') JOIN reviews ON reviews.bookId = bookInfo.id;
+		
+SELECT id, isbn, title ,author, year FROM bookInfo LEFT JOIN reviews ON reviews.bookId = bookInfo.id;
+
+
+
+  SELECT origin, destination, name FROM flights JOIN passengers ON passengers.flight_id = flights.id;
+  SELECT origin, destination, name FROM flights JOIN passengers ON passengers.flight_id = flights.id WHERE name = 'Alice';
+  SELECT origin, destination, name FROM flights LEFT JOIN passengers ON passengers.flight_id = flights.id;
+	  
+	  
+	  SELECT title FROM bookInfo WHERE isbn LIKE %ts% OR title LIKE %ts% OR author LIKE %ts%
+	  
+	  SELECT title FROM bookInfo WHERE isbn LIKE '%Legend%' OR title LIKE '%Legend%' OR author LIKE '%Legend%'
+	  
+	          pattern = "%" + name + "%"
+        booksList = cursor.execute("SELECT title FROM bookInfo WHERE isbn LIKE %s OR title LIKE %s OR author LIKE %s",(pattern,pattern,pattern)).fetchall()
+       

@@ -1,0 +1,30 @@
+
+{% from "form_macro.html" import render_field %}
+
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container theme-showcase" style="background-color:#fbeec1;  role="main" >
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="well bs-component">
+                <form class="form-horizontal" , method="POST" ,action="">
+                    {{ form.hidden_tag() }}
+                    <fieldset>
+                        <legend class="labelDesign" >Welcome BookishFella </legend>
+                        {{form.email.label}}
+                        {{form.email}}
+
+                        {{form.password.label}}
+                        {{form.password}}
+
+                        <div class="form-group">
+                            {{ form.submit(class="btn btn-outline-info") }}
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

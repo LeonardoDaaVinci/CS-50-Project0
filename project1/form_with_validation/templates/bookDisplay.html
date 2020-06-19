@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <title>Search Books</title>
+    <style>
+        .form-control-borderless {
+            border: none;
+        }
+
+        .form-control-borderless:hover,
+        .form-control-borderless:active,
+        .form-control-borderless:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+
+
+        @font-face {
+            font-family: testfont;
+            src: url("/ParkLaneNF.otf") format("opentype");
+        }
+
+        .LogoFont {
+            /* font-family: Snell Roundhand, cursive; */
+            position: absolute;
+            left : 5px;
+            top : 5px;
+            height: 50px;
+            width: 50px;
+        }
+
+        .SearchBarPosition {
+            position: absolute;
+            margin-left: 580px;
+            margin-top: 300px;
+        }
+
+        .btn-warning {
+            background-color: #fbeec1;
+        }
+
+        .showBookList {
+            position: absolute;
+            left: 200px;
+            top: 200px;
+        }
+
+        .bookDispFont {
+            color: rgb(25, 29, 29);
+            font-size: 20px;
+            border: 3px solid rgb(213, 219, 213);
+            background-color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="topnav" ,>
+            <a  href="#logo"><img class="LogoFont" src="{{ url_for('static', filename='Logo.png') }}"> </a>
+            <a href="#space"></a>
+            <a href="#APP">Bookish Fella</a>
+            <a href="{{ url_for('bookPage')}}">Search Book</a>
+            <div class="topnav-right">
+                <a href="#Logged in as Krishna">Hi {{usrName}}</a>
+                <a href="{{ url_for('index')}}">Logout</a>
+            </div>
+        </div>
+
+        <div>
+            <img class="banner" src="{{ url_for('static', filename='BookSearch.jpg') }}">
+        </div>
+
+
+    <div class="showBookList">
+        </ul >
+        <div class="bookDispFont">
+            <div>Book name: {{bookInfo.title}}</div>
+            <div>Book ISBN: {{bookInfo.isbn}}</div>
+            <div>Book Author: {{bookInfo.author}}</div>
+            <div>Book Year: {{bookInfo.year}}</div>
+            {% for review in reviewList %}
+            <li>
+                <a href="#HOME">
+                    <button class="btn btn-lg btn-warning" >{{ review }}</button>
+                </a>
+            </li>
+            {% endfor %}
+            <dt>Post your review For the Book:
+            <dt>
+        </div>
+        </ul>
+        <form action="" method=post>
+        </ul>
+        <dd>{{ form.body(cols="20", rows="5") }}}
+        </ul>
+        <p>
+        <input type=submit value="Publish">
+        </form>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
